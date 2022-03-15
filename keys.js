@@ -1,9 +1,11 @@
-const keys = require("./node_modules/underscore/cjs/keys.js")
-const findKeys = (obj) => {
-    if (obj && typeof (obj) === "object" && !Array.isArray(obj)) {
-        return keys(obj)
+const keys = function (obj) {
+    let output = []
+    if(obj && typeof(obj)==="object" && !Array.isArray(obj)){
+        for (let key in obj) {
+            output.push(key)
+        }
     }
-    return []
+    return output
 }
 
-module.exports = findKeys
+module.exports = keys
