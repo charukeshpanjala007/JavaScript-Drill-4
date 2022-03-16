@@ -4,7 +4,13 @@ const test1 = { name: 'Bruce Wayne', age: 36, location: 'Gotham' }
 const test2 = undefined
 const test3 = null
 const test4 = [{ name: 'Bruce Wayne', age: 36, location: 'Gotham' }]
+
 const test5 = { name: 'Bruce Wayne', age: 36, location: 'Gotham' , height: "6'", power: 'wealth'}
+
+const test6 ={
+    name: 'Bruce Wayne', age: 36, location: 'Gotham', partners : {one: "Wonder Women", two: "Flash" , three: "Superman"}
+}
+
 console.log("Test Case-1")
 let output = problem6(test1)
 console.log(output)
@@ -23,4 +29,8 @@ console.log(output)
 
 console.log("Test Case-5")
 output = problem6(test5)
+console.log(output)
+
+console.log("Test Case-6")
+output = problem6(test6)
 console.log(output)

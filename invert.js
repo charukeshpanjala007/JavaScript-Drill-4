@@ -4,6 +4,9 @@ const invert = function (obj) {
         for (let key in obj) {
             let value = obj[key]
             if(key && value){
+                if(typeof(value)!=="string"){
+                    value = JSON.stringify(value)
+                }
                 output[value] = key
             }
         }
